@@ -108,6 +108,20 @@ function yearsSince(dateStr) {
   return currentYear - targetYear;
 }
 
+function formatDate(dateString) {
+  const date = new Date(dateString);
+  const year = date.getFullYear();
+  const month = date.getMonth() + 1;
+  const day = date.getDate();
+
+  const weekDays = ["일", "월", "화", "수", "목", "금", "토"];
+  const weekDay = weekDays[date.getDay()];
+
+  return `${year}년 ${month}월 ${day}일 (${weekDay})`;
+}
+
+console.log(formatDate("2014-11-06"));
+
 const bestMovie = best(movies);
 const topAudienceMovie = sortBy(movies, "audience", true)[0];
 
@@ -124,10 +138,7 @@ function getList(data) {
 }
 
 function averageBy(list, key) {
-  let sum = 0;
-  for (let i = 0; i < list.length; i++) {
-    sum += list[i][key];
-  }
+  const sum = list.reduce((acc, m) => acc + m[key], 0);
   return sum / list.length;
 }
 
@@ -137,3 +148,10 @@ const searchResult = search(getList(TMDB), "the");
 console.log(`C4 'the' 검색 결과: ${searchResult.length}편`);
 console.table(sortBy(getList(TMDB), "vote_average", true).slice(0, 5), ["title", "release_date", "vote_average"]);
 
+// loadJson : tmdb.json 파일 ⇒ 콘솔에 평점 상위 5편 표(13주차 fetch 미리 보기)
+async function loadJson() {
+  const res = await fetch("tmdb.json");
+  const data = await res.json();
+  console.table(sortBy(getList(data), "vote_average", true).slice(0, 5), ["title", "vote_average"]);
+}
+loadJson();
