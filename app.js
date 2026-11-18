@@ -50,7 +50,7 @@ let bigA = "";
 for (let i = 0; i < audiences.length; i++) {
   if (audiences[i] >= 1000000) {
     if (bigA !== "") {
-      bigA += " ";
+      bigA += ", ";
     }
     bigA += titles[i];
   }
