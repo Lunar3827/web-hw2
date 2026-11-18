@@ -14,6 +14,7 @@ const audiences=[
     0, 0, 0, 0, 0, 2248126, 3374510, 104874, 1999477, 77153
 ]
 
+// Part B : 영화 객체 10건(Part A와 같은 순서)
 const movies = [
   {
     title: "킹덤 오브 헤븐", 
@@ -36,83 +37,84 @@ const movies = [
     rank: null 
   },
   {
-    title: "인터스텔라", 
+    title: "나니아 연대기: 사자, 마녀 그리고 옷장", 
     year: 2005, 
-    date: "2014-11-06", 
+    date: "2005-12-07", 
     rating: 7.1, 
     audience: 0, 
-    poster: "/abc123.jpg", 
+    poster: "/vSY6MgDWD5Ch5I87X8BaxZyydCI.jpg", 
     type: "mine", 
     rank: null 
   },
   {
-    title: "인터스텔라", 
+    title: "반지의 제왕: 반지 원정대", 
     year: 2001, 
     date: "2001-12-18", 
     rating: 8.4, 
     audience: 0, 
-    poster: "/abc123.jpg", 
+    poster: "/r18JdjImbWDRwkbVDIzWoLQqkCo.jpg", 
     type: "mine", 
     rank: null 
   },
   {
-    title: "인터스텔라", 
+    title: "몬티 파이튼의 성배", 
     year: 1975, 
     date: "1975-04-03", 
-    rating: 8.4, 
+    rating: 7.8, 
     audience: 0, 
-    poster: "/abc123.jpg", 
+    poster: "/7nTkHjETdGMYK1phHwDbPsrzbYl.jpg", 
     type: "mine", 
     rank: null 
   },
 
   {
-    title: "박스오피스 1위 영화제목", 
+    title: "극장판 치이카와: 인어 섬의 비밀", 
     year: 2026, 
     date: "2026-09-30", 
     rating: 7.4, 
-    audience: 2345678, 
-    poster: "/xyz789.jpg", 
+    audience: 2248126, 
+    poster: "/5TMyytCI5Pfc9c1eNsljiCdiB05.jpg", 
     type: "boxoffice", 
     rank: 1 
   },
   {
-    title: "박스오피스 1위 영화제목", 
+    title: "암살자(들)", 
     year: 2026, 
     date: "2026-09-23", 
     rating: 7.2, 
-    audience: 2345678, 
-    poster: "/xyz789.jpg", 
+    audience: 3374510, 
+    poster: "/c55ijsOdntj6P25vDwHLdgsBpmV.jpg", 
     type: "boxoffice", 
-    rank: 1 
+    rank: 2 
   },
   {
-    title: "박스오피스 1위 영화제목", 
+    title: "실낙원", 
     year: 2026, 
     date: "2026-10-21", 
     rating: 8.0, 
-    audience: 2345678, 
-    poster: "/xyz789.jpg", 
+    audience: 104874, 
+    poster: "/wkm9BQLok7U2KihcCspCa663Qse.jpg", 
     type: "boxoffice", 
-    rank: 1 
+    rank: 3 
   },
   {
-    title: "박스오피스 1위 영화제목", 
+    title: "타짜: 벨제붑의 노래", 
     year: 2026, 
     date: "2026-10-23", 
     rating: 6.1, 
-    audience: 2345678, 
-    poster: "/xyz789.jpg", 
+    audience: 1999477, 
+    poster: "/ueigb5zra1tj6FTK9yhh2P33P9B.jpg", 
     type: "boxoffice", 
-    rank: 1 
+    rank: 4 
   },
   {
-    title: "박스오피스 1위 영화제목", 
+    title: "클레이페이스", 
     year: 2026, 
     date: "2026-10-21", 
     rating: 7.5, 
-    audience: 2345678, 
-    poster: "/xyz789.jpg", 
+    audience: 77153, 
+    poster: "/LSGpoSAlitss0KOvVakkeUToZo.jpg", 
     type: "boxoffice", 
-    rank: 1 
+    rank: 5
+      // 같은 모양으로 8건 더(내 영화 4편을 먼저, 박스오피스 2~5위를 나중에)
   }];
