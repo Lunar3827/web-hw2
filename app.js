@@ -1,4 +1,5 @@
 // ===== Part A =====
+
 let sumA = 0;
 for (let i = 0; i < ratings.length; i++) {
   sumA += ratings[i];
@@ -60,7 +61,9 @@ if (bigA === "") {
 }
 console.log(`A5 관객 100만 이상: ${bigA}`);
 
+
 // ===== Part B =====
+
 function average(list) {
   return averageBy(list, "rating");
 }
@@ -132,7 +135,9 @@ const summaryText =
 
 document.getElementById("out").textContent = summaryText;
 
+
 // ===== Part C =====
+
 function getList(data) {
   return data.results;
 }
@@ -148,7 +153,6 @@ const searchResult = search(getList(TMDB), "the");
 console.log(`C4 'the' 검색 결과: ${searchResult.length}편`);
 console.table(sortBy(getList(TMDB), "vote_average", true).slice(0, 5), ["title", "release_date", "vote_average"]);
 
-// loadJson : tmdb.json 파일 ⇒ 콘솔에 평점 상위 5편 표(13주차 fetch 미리 보기)
 async function loadJson() {
   const res = await fetch("tmdb.json");
   const data = await res.json();
